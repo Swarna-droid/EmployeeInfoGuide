@@ -66,11 +66,11 @@ public class CustomAdapter extends BaseAdapter {
 
 		ImageLoader imageLoader = VolleyHelper.getInstance(context).getImageLoader();
 
-		EmployeeInfo guideBook = employeeInfoList.get(position);
+		EmployeeInfo eInfo = employeeInfoList.get(position);
 
-		holder.txtGuideName.setText(guideBook.getName());
-		//		imageLoader.get(guideBook.getIcon(), listener)
-		holder.imgGuideIcon.setImageUrl(guideBook.getIcon(), imageLoader);
+		holder.txtGuideName.setText(eInfo.getName());
+		//		imageLoader.get(eInfo.getIcon(), listener)
+		holder.imgGuideIcon.setImageUrl(eInfo.getIcon(), imageLoader);
 
 		return convertView;
 	}
